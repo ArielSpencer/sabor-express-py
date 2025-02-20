@@ -1,5 +1,7 @@
 import os
 
+restaurants = []
+
 def display_logo():
     print('*************')
     print('⟆Ꭿᑲ𝖮ᖇ ᕮⲭᕈᖇ∈⟆⟆')
@@ -13,7 +15,12 @@ def display_options_menu():
 
 def register_restaurant():
     os.system('clear')
-    print('Cadastrar Restaurante')
+    print('Cadastrar Restaurante\n')
+    restaurant_name = input('Digite o nome do restaurante: ')
+    restaurants.append(restaurant_name)
+    print(f'Restaurante {restaurant_name} cadastrado com sucesso!\n')
+    input('Digite qualquer tecla para voltar ao menu principal. ')
+    main()
 
 def list_restaurants():
     os.system('clear')
