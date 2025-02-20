@@ -33,18 +33,21 @@ def invalid_option():
     main()
 
 def chosen_menu_option():
-    chosen_option = int(input('\nEscolha uma opção: '))
+    try:
+        chosen_option = int(input('\nEscolha uma opção: '))
 
-    if chosen_option == 1:
-        register_restaurant()
-    elif chosen_option == 2:
-        list_restaurants()
-    elif chosen_option == 3:
-        activate_restaurant()
-    elif chosen_option == 4:
-        exit_program()
-    else:
-        invalid_option()       
+        if chosen_option == 1:
+            register_restaurant()
+        elif chosen_option == 2:
+            list_restaurants()
+        elif chosen_option == 3:
+            activate_restaurant()
+        elif chosen_option == 4:
+            exit_program()
+        else:
+            invalid_option()      
+    except:
+        invalid_option() 
 
 def main():
     os.system('clear')
