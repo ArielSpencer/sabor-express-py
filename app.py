@@ -27,6 +27,11 @@ def exit_program():
     os.system('clear')
     print('\nPrograma finalizado!')
 
+def invalid_option():
+    print('Opção inválida!')
+    input('Digite qualquer tecla para voltar ao menu principal.')
+    main()
+
 def chosen_menu_option():
     chosen_option = int(input('\nEscolha uma opção: '))
 
@@ -39,10 +44,7 @@ def chosen_menu_option():
     elif chosen_option == 4:
         exit_program()
     else:
-        os.system('clear')
-        print(f'{chosen_option} é uma opção inválida! Digite um número entre 1 e 4.')
-        display_options_menu()
-        chosen_menu_option()
+        invalid_option()       
 
 def main():
     os.system('clear')
@@ -52,4 +54,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
