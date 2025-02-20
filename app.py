@@ -24,7 +24,13 @@ def register_restaurant():
 
 def list_restaurants():
     os.system('clear')
-    print('Listar Restaurantes')
+    print('Listar Restaurantes\n')
+
+    for restaurant in restaurants:
+        print(f'- {restaurant}')
+    
+    input('\nDigite qualquer tecla para voltar ao menu principal. ')
+    main()
 
 def activate_restaurant():
     os.system('clear')
