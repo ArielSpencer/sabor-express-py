@@ -5,45 +5,50 @@ restaurants = []
 def display_logo():
     print('*************')
     print('⟆Ꭿᑲ𝖮ᖇ ᕮⲭᕈᖇ∈⟆⟆')
-    print('*************')
+    print('*************\n')
 
 def display_options_menu():
     print('1. Cadastrar Restaurante')
     print('2. Listar Restaurantes')
     print('3. Ativar Restaurante')
-    print('4. Sair\n')
+    print('4. Sair')
 
-def register_restaurant():
+def display_subtitle(text):
     os.system('clear')
-    print('Cadastrar Restaurante\n')
-    restaurant_name = input('Digite o nome do restaurante: ')
-    restaurants.append(restaurant_name)
-    print(f'Restaurante {restaurant_name} cadastrado com sucesso!\n')
-    input('Digite qualquer tecla para voltar ao menu principal. ')
+    print(f'{text}\n')
+
+def back_to_menu():
+    input('\nDigite "Enter" para voltar ao menu principal. ')
     main()
 
+def register_restaurant():
+    display_subtitle('Cadastrar Restaurante')
+
+    restaurant_name = input('Digite o nome do restaurante: ')
+    restaurants.append(restaurant_name)
+    print(f'Restaurante {restaurant_name} cadastrado com sucesso!')
+
+    back_to_menu()
+
 def list_restaurants():
-    os.system('clear')
-    print('Listar Restaurantes\n')
+    display_subtitle('Listar Restaurantes')
 
     for restaurant in restaurants:
         print(f'- {restaurant}')
     
-    input('\nDigite qualquer tecla para voltar ao menu principal. ')
-    main()
+    back_to_menu()
 
 def activate_restaurant():
-    os.system('clear')
-    print('Ativar Restaurante')
+    display_subtitle('Ativar Restaurante')
+
+    back_to_menu()
 
 def exit_program():
-    os.system('clear')
-    print('\nPrograma finalizado!')
+    display_subtitle('Programa finalizado!')
 
 def invalid_option():
     print('Opção inválida!')
-    input('Digite qualquer tecla para voltar ao menu principal.')
-    main()
+    back_to_menu()
 
 def chosen_menu_option():
     try:
