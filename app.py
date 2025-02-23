@@ -25,6 +25,16 @@ def back_to_menu():
     main()
 
 def register_restaurant():
+    '''Função para cadastrar um restaurante
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria do restaurante
+
+    Outputs:
+    - Adiciona um novo restaurante na lista de restaurantes
+    
+    '''
     display_subtitle('Cadastrar Restaurante')
 
     restaurant_name = input('Digite o nome do restaurante: ')
