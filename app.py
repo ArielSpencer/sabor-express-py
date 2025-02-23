@@ -40,11 +40,12 @@ def register_restaurant():
 def list_restaurants():
     display_subtitle('Listar Restaurantes')
 
+    print(f' Nome do Restaurante'.ljust(21), f'| Categoria'.ljust(22), f'| Status')
     for restaurant in restaurants:
         name_restaurant = restaurant['nome']
         category_restaurant = restaurant['categoria']
         status_restaurant = 'Ativo' if restaurant['ativo'] else 'Inativo'
-        print(f'- Restaurante: {name_restaurant} | Categoria: {category_restaurant} | Status: {status_restaurant}')
+        print(f' {name_restaurant.ljust(20)} | {category_restaurant.ljust(20)} | {status_restaurant}')
     
     back_to_menu()
 
