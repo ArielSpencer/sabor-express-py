@@ -15,7 +15,10 @@ def display_options_menu():
 
 def display_subtitle(text):
     os.system('clear')
-    print(f'{text}\n')
+    line = '*' * (len(text) + 4)
+    print(line)
+    print(f'* {text} *')
+    print(f'{line}\n')
 
 def back_to_menu():
     input('\nDigite "Enter" para voltar ao menu principal. ')
